@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 var appConfig = require('../config/app-config');
 
-mongoose.connect(appConfig.db_url);
+mongoose.connect(appConfig.db_url_heroku);
 
 // when successfully connected
 mongoose.connection.on('connected', function () {
-  console.log('Mongoose default connection open to ' + appConfig.db_url);
+  console.log('Mongoose default connection open to ' + appConfig.db_url_heroku);
 });
 
 // when connection throws an error
